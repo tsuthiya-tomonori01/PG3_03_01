@@ -22,9 +22,6 @@ public:
 
 private:
 
-	char keys[256] = { 0 };
-	char preKeys[256] = { 0 };
-
 	Player* player_ = nullptr;
 	Enemy* enemy_ = nullptr;
 

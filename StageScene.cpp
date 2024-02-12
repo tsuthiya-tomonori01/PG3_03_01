@@ -28,6 +28,8 @@ void StageScene::Update()
 	player_->Update();
 	enemy_->Update();
 
+	AllCollision();
+
 	if (input_->TriggerKey(DIK_SPACE))
 	{
 		BulletAlive = true;
@@ -50,6 +52,7 @@ void StageScene::Update()
 		player_->Reset();
 		enemy_->Reset();
 		BulletAlive = false;
+		BulletTransform = { 0,0,15 };
 	}
 }
 

@@ -19,11 +19,16 @@ void Enemy::Update()
 	{
 		EnemySpeed = EnemySpeed * -1;
 	}
+
+	
 }
 
 void Enemy::Draw()
 {
-	Novice::DrawEllipse(transform_.x, transform_.y, transform_.radius, transform_.radius, 0.0f, RED, kFillModeSolid);
+	if (EnemyAlive == true)
+	{
+		Novice::DrawEllipse(transform_.x, transform_.y, transform_.radius, transform_.radius, 0.0f, RED, kFillModeSolid);
+	}
 }
 
 void Enemy::Reset()
